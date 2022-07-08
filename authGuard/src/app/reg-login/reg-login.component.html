@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <form class="design" #regForm="ngForm" (ngSubmit)="regDisp(regForm.value)">
+
+        <br>
+        <label for="mailID">User Mail: </label>
+        <input type="text" required #mail="ngModel" name="mailID" email placeholder="Enter Mail" ngModel> <br>
+        <span *ngIf="mail.invalid && mail.touched" style="color: red"> Enter a valid mail id</span>
+        <br>
+        
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" minlength="8" maxlength="16" required #pswd="ngModel" pattern="[a-zA-Z0-9]+$" name="password" placeholder="Enter Password" ngModel> <br>
+        <span *ngIf="pswd.invalid && pswd.touched" style="color: red;"> Enter a valid password</span>
+        <br>
+
+        <br>
+        <button [disabled]="regForm.invalid && regForm.touched" style="background-color:rgb(125, 199, 126);"> Register </button>
+    </form>
+</body>
+
+</html>
