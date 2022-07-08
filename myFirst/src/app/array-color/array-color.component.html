@@ -1,0 +1,13 @@
+<p>array-color works!</p>
+
+<div *ngFor = "let index of intArr;">  
+    <ng-container *ngIf = "index%2===0; then thenBlock; else elseBlock;"></ng-container>
+    
+    <ng-template #thenBlock>
+        <li style = "color: green;">{{index}}</li>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <li style = "color: red;">{{index}}</li>
+    </ng-template>
+</div>
