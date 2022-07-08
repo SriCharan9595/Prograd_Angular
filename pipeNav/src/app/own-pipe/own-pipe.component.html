@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <div class="conversation">
+            <br><input type="text" placeholder="Enter bill in USD" [(ngModel)]="userBill">
+            <p><b> Bill-Machine: </b> Your total bill is {{userBill}} USD </p>
+            <div><b> Customer: </b>  Okie, I have to pay {{userBill | food:71}} Rupees</div>
+        </div>
+    </body>
+</html>
