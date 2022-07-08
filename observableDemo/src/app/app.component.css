@@ -1,0 +1,20 @@
+ul{
+    width: 1200px;
+    margin:auto;
+    border: 1px solid #404040;
+    background-color: #404040;    
+    height: 55px;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+
+li:hover{
+    background-color: #231F20;
+    cursor: pointer;
+}
